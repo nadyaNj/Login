@@ -33,4 +33,15 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
     public User getUserForLogin(@Nonnull String userName, @Nonnull String password) {
         return userRepository.getUserForLogin(userName, password);
     }
+
+    @Nonnull
+    @Override
+    public List<User> getUsersForSearchParameters(@Nonnull final UserLookupParameters userLookupParameters) {
+
+        if (userLookupParameters == null) {
+            throw new IllegalArgumentException("Lookup parameters should not be null");
+        }
+
+        return userRepository.getUsersForSearchParameters(userLookupParameters.getUserName(), userLookupParameters.getFirstName(), userLookupParameters.getSecondName());
+    }
 }
