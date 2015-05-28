@@ -43,7 +43,8 @@ public class UserServiceFacadeImpl implements UserServiceFacade {
 
         User user = new User();
 
+        user = userService.findByUserNamePassword(userName, password);
 
-        return null;
+        return universalConverter.convert(user, UserFacadeModel.class);
     }
 }

@@ -28,9 +28,8 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
         return userRepository;
     }
 
-    @Nonnull
     @Override
-    public User getUserForLogin(@Nonnull String userName, @Nonnull String password) {
-        return userRepository.getUserForLogin(userName, password);
+    public User findByUserNamePassword(@Nonnull String userName, @Nonnull String password) {
+        return userRepository.findByUserNamePassword(userName, password);
     }
 }

@@ -12,6 +12,5 @@ import javax.annotation.Nonnull;
  */
 public interface UserService extends BaseService<User> {
 
-    @Nonnull
-    User getUserForLogin(@Nonnull String userName, @Nonnull String password);
+    User findByUserNamePassword(@Nonnull String userName, @Nonnull String password);
 }
