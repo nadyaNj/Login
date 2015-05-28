@@ -6,8 +6,9 @@
 
     <groupId>com.home.login</groupId>
     <artifactId>login</artifactId>
-    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
 
     <name>Login</name>
 
